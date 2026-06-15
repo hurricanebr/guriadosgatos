@@ -991,6 +991,7 @@ p  { color: var(--color-text-light); }
   color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
+.ebook-aprenda__card svg { margin-bottom: 1rem; }
 
 /* Sobre a autora */
 .ebook-autora { position: relative; overflow: hidden; }
