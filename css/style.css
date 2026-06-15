@@ -699,3 +699,77 @@ p  { color: var(--color-text-light); }
 @media (max-width: 767px) {
   .footer__container { grid-template-columns: 1fr; gap: 2rem; }
 }
+
+/* ============================================================
+   SVG ICONS
+   ============================================================ */
+.card__icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primary);
+}
+
+.footer__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   HERO TRUST BADGE
+   ============================================================ */
+.hero__trust {
+  margin-bottom: 1.5rem;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-white);
+  border: 1px solid rgba(68,68,164,0.12);
+  border-radius: 50px;
+  padding: 0.4rem 1rem 0.4rem 0.6rem;
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.trust-badge__stars {
+  color: #FFB800;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   CURSOR & INTERACTIVE FEEDBACK
+   ============================================================ */
+.card,
+.depoimento-card,
+.faq__item {
+  cursor: pointer;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
