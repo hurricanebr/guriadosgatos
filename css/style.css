@@ -704,10 +704,13 @@ p  { color: var(--color-text-light); }
    DECORATIVE CAT ILLUSTRATIONS
    ============================================================ */
 
-/* Sections that host cats need a positioning context */
+/* All sections with cats need a positioning context */
 .hero,
 #beneficios,
 #como-funciona,
+#servicos,
+#sobre,
+#area,
 #depoimentos,
 #faq {
   position: relative;
@@ -719,52 +722,76 @@ p  { color: var(--color-text-light); }
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
-  mix-blend-mode: multiply; /* white bg in PNG becomes transparent */
+  mix-blend-mode: multiply;
   z-index: 0;
   display: block;
 }
 
-/* Hero — large cluster, bottom-left (mirrored) */
+/* Hero — gato laranja, canto inferior direito */
 .cat-deco--hero {
-  width: 280px;
-  bottom: -40px;
-  left: -30px;
-  opacity: 0.13;
-}
-
-/* Beneficios — medium, top-right corner */
-.cat-deco--beneficios {
   width: 200px;
-  top: -10px;
-  right: -20px;
-  opacity: 0.10;
-  transform: scaleX(-1);
+  bottom: -20px;
+  right: 5%;
+  opacity: 0.30;
 }
 
-/* Como Funciona — bottom-left */
-.cat-deco--como {
-  width: 190px;
-  bottom: -25px;
-  left: -10px;
-  opacity: 0.09;
-  transform: rotate(5deg);
-}
-
-/* Depoimentos — top-right */
-.cat-deco--depoimentos {
-  width: 220px;
-  top: 0;
-  right: -15px;
-  opacity: 0.10;
-  transform: scaleX(-1);
-}
-
-/* FAQ — bottom-right */
-.cat-deco--faq {
+/* Benefícios — gato bege com novelo, canto inferior esquerdo */
+.cat-deco--beneficios {
   width: 170px;
+  bottom: -15px;
+  left: 2%;
+  opacity: 0.28;
+  transform: scaleX(-1);
+}
+
+/* Como Funciona — gato alongando, canto superior direito */
+.cat-deco--como {
+  width: 185px;
+  top: 10px;
+  right: 2%;
+  opacity: 0.25;
+}
+
+/* Serviços — gato marrom sentado, canto inferior esquerdo */
+.cat-deco--servicos {
+  width: 155px;
   bottom: -10px;
-  right: 30px;
-  opacity: 0.09;
+  left: 3%;
+  opacity: 0.28;
+}
+
+/* Sobre — gato amarelo, canto superior direito */
+.cat-deco--sobre {
+  width: 160px;
+  top: 15px;
+  right: 2%;
+  opacity: 0.25;
+  transform: scaleX(-1);
+}
+
+/* Área — gato verde correndo, canto inferior direito */
+.cat-deco--area {
+  width: 175px;
+  bottom: -10px;
+  right: 3%;
+  opacity: 0.28;
+}
+
+/* Depoimentos — gato preto, canto inferior esquerdo */
+.cat-deco--depoimentos {
+  width: 165px;
+  bottom: -10px;
+  left: 2%;
+  opacity: 0.28;
+  transform: scaleX(-1);
+}
+
+/* FAQ — gato deitado bege, canto inferior direito */
+.cat-deco--faq {
+  width: 185px;
+  bottom: -8px;
+  right: 3%;
+  opacity: 0.28;
 }
 
 /* Hide on mobile to keep content clean */
