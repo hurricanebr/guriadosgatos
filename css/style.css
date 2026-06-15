@@ -14,7 +14,7 @@
   --color-white:        #FFFFFF;
   --color-primary-light: #4444A4;
   --color-section-alt:  #4444A4;
-  --font-heading: 'Dancing Script', cursive;
+  --font-heading: 'Varela Round', sans-serif;
   --font-body:    'Nunito', sans-serif;
   --radius:    16px;
   --radius-sm: 8px;
@@ -71,6 +71,8 @@ p  { color: var(--color-text-light); }
 
 .section { padding: 5rem 0; }
 .section--alt { background-color: var(--color-section-alt); }
+.section--alt .section-header h2 { color: #fff; }
+.section--alt .section-header p  { color: rgba(255,255,255,0.82); }
 
 .section-header {
   text-align: center;
@@ -150,7 +152,7 @@ p  { color: var(--color-text-light); }
 .badge {
   display: inline-block;
   background-color: var(--color-primary-light);
-  color: var(--color-primary);
+  color: #fff;
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.875rem;
