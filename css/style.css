@@ -2,8 +2,8 @@
    CUSTOM PROPERTIES
    =========================== */
 :root {
-  --color-primary:       #4444A4;
-  --color-primary-dark:  #33338A;
+  --color-primary:       #7B35D8;
+  --color-primary-dark:  #2D1564;
   --color-accent:        #FFB8C6;
   --color-bg:            #FDFBFF;
   --color-card:          #FFFFFF;
@@ -12,14 +12,14 @@
   --color-whatsapp:      #25D366;
   --color-whatsapp-dark: #1DA851;
   --color-white:        #FFFFFF;
-  --color-primary-light: #4444A4;
-  --color-section-alt:  #4444A4;
-  --font-heading: 'Varela Round', sans-serif;
+  --color-primary-light: #E8D5FF;
+  --color-section-alt:  #2D1564;
+  --font-heading: 'Dancing Script', cursive;
   --font-body:    'Nunito', sans-serif;
   --radius:    16px;
   --radius-sm: 8px;
-  --shadow:    0 4px 20px rgba(68, 68, 164, 0.08);
-  --shadow-lg: 0 8px 32px rgba(68, 68, 164, 0.15);
+  --shadow:    0 4px 20px rgba(123, 53, 216, 0.08);
+  --shadow-lg: 0 8px 32px rgba(123, 53, 216, 0.15);
   --transition: 0.3s ease;
   --container: 1200px;
 }
@@ -152,7 +152,7 @@ p  { color: var(--color-text-light); }
 .badge {
   display: inline-block;
   background-color: var(--color-primary-light);
-  color: #fff;
+  color: var(--color-primary-dark);
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.875rem;
