@@ -715,6 +715,7 @@ p  { color: var(--color-text-light); }
 #faq {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .cat-deco {
@@ -723,16 +724,8 @@ p  { color: var(--color-text-light); }
   user-select: none;
   -webkit-user-drag: none;
   mix-blend-mode: multiply;
-  z-index: 0;
+  z-index: -1;
   display: block;
-}
-
-/* Hero — gato laranja, canto inferior direito */
-.cat-deco--hero {
-  width: 200px;
-  bottom: -20px;
-  right: 5%;
-  opacity: 0.30;
 }
 
 /* Benefícios — gato bege com novelo, canto inferior esquerdo */
@@ -794,9 +787,12 @@ p  { color: var(--color-text-light); }
   opacity: 0.28;
 }
 
-/* Hide on mobile to keep content clean */
+/* Mobile: smaller cats, stay decorative without overlapping content */
 @media (max-width: 767px) {
-  .cat-deco { display: none; }
+  .cat-deco {
+    width: 90px;
+    opacity: 0.18;
+  }
 }
 
 /* ============================================================
