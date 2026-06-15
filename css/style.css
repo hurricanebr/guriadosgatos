@@ -701,6 +701,78 @@ p  { color: var(--color-text-light); }
 }
 
 /* ============================================================
+   DECORATIVE CAT ILLUSTRATIONS
+   ============================================================ */
+
+/* Sections that host cats need a positioning context */
+.hero,
+#beneficios,
+#como-funciona,
+#depoimentos,
+#faq {
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  mix-blend-mode: multiply; /* white bg in PNG becomes transparent */
+  z-index: 0;
+  display: block;
+}
+
+/* Hero — large cluster, bottom-left (mirrored) */
+.cat-deco--hero {
+  width: 280px;
+  bottom: -40px;
+  left: -30px;
+  opacity: 0.13;
+}
+
+/* Beneficios — medium, top-right corner */
+.cat-deco--beneficios {
+  width: 200px;
+  top: -10px;
+  right: -20px;
+  opacity: 0.10;
+  transform: scaleX(-1);
+}
+
+/* Como Funciona — bottom-left */
+.cat-deco--como {
+  width: 190px;
+  bottom: -25px;
+  left: -10px;
+  opacity: 0.09;
+  transform: rotate(5deg);
+}
+
+/* Depoimentos — top-right */
+.cat-deco--depoimentos {
+  width: 220px;
+  top: 0;
+  right: -15px;
+  opacity: 0.10;
+  transform: scaleX(-1);
+}
+
+/* FAQ — bottom-right */
+.cat-deco--faq {
+  width: 170px;
+  bottom: -10px;
+  right: 30px;
+  opacity: 0.09;
+}
+
+/* Hide on mobile to keep content clean */
+@media (max-width: 767px) {
+  .cat-deco { display: none; }
+}
+
+/* ============================================================
    SVG ICONS
    ============================================================ */
 .card__icon svg {
