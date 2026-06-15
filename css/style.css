@@ -692,7 +692,7 @@ p  { color: var(--color-text-light); }
   width: 170px;
   bottom: -15px;
   left: 2%;
-  opacity: 0.28;
+  opacity: 1;
   transform: scaleX(-1);
 }
 
@@ -701,7 +701,7 @@ p  { color: var(--color-text-light); }
   width: 185px;
   top: 10px;
   right: 2%;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 /* Serviços — gato marrom sentado, canto inferior esquerdo */
@@ -709,7 +709,7 @@ p  { color: var(--color-text-light); }
   width: 155px;
   bottom: -10px;
   left: 3%;
-  opacity: 0.28;
+  opacity: 1;
 }
 
 /* Sobre — gato amarelo, canto superior direito */
@@ -717,7 +717,7 @@ p  { color: var(--color-text-light); }
   width: 160px;
   top: 15px;
   right: 2%;
-  opacity: 0.25;
+  opacity: 1;
   transform: scaleX(-1);
 }
 
@@ -726,7 +726,7 @@ p  { color: var(--color-text-light); }
   width: 165px;
   bottom: -10px;
   left: 2%;
-  opacity: 0.28;
+  opacity: 1;
   transform: scaleX(-1);
 }
 
@@ -735,14 +735,14 @@ p  { color: var(--color-text-light); }
   width: 185px;
   bottom: -8px;
   right: 3%;
-  opacity: 0.28;
+  opacity: 1;
 }
 
 /* Mobile: smaller cats, stay decorative without overlapping content */
 @media (max-width: 767px) {
   .cat-deco {
     width: 90px;
-    opacity: 0.18;
+    opacity: 1;
   }
 }
 
