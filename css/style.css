@@ -847,6 +847,51 @@ p  { color: var(--color-text-light); }
 }
 
 /* ===========================
+   EBOOK PROMO BANNER
+   =========================== */
+.ebook-promo {
+  background-color: var(--color-primary-light);
+  padding: 4rem 0;
+}
+.ebook-promo__container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.ebook-promo__cover {
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-2deg);
+  transition: transform var(--transition);
+}
+.ebook-promo__cover:hover { transform: rotate(0deg) scale(1.03); }
+.ebook-promo__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.ebook-promo__content h2 { color: var(--color-primary-dark); }
+.ebook-promo__content p  { max-width: 500px; }
+.ebook-promo__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .ebook-promo__container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .ebook-promo__cover { width: 160px; transform: none; }
+  .ebook-promo__content { align-items: center; }
+}
+
+/* ===========================
    EBOOK PAGE
    =========================== */
 
