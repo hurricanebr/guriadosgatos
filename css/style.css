@@ -195,7 +195,8 @@ p  { color: var(--color-text-light); }
   padding: 0.875rem 0;
   transition: background-color var(--transition), box-shadow var(--transition);
 }
-.nav.scrolled {
+.nav.scrolled,
+.nav--solid {
   background-color: rgba(253, 251, 255, 0.93);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
