@@ -1,0 +1,19 @@
+{
+  "name": "guriadosgatos",
+  "version": "1.0.0",
+  "description": "Cat sitter domiciliar em Porto Alegre",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static HTML site - no build needed'"
+  },
+  "keywords": [
+    "cat-sitter",
+    "porto-alegre"
+  ],
+  "author": "Guria dos Gatos",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
