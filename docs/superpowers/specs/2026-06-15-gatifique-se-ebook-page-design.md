@@ -106,7 +106,7 @@ Herda o design system do site principal:
 
 ### 7. Footer mínimo (`.ebook-footer`)
 - Fundo `--color-primary-dark`
-- Texto branco: "© 2025 Guria dos Gatos"
+- Texto branco: "© 2026 Guria dos Gatos"
 - Ícones SVG Instagram e Facebook com links
 
 ---
