@@ -323,7 +323,7 @@ p  { color: var(--color-text-light); }
    =========================== */
 .hero {
   padding: 8rem 0 5rem;
-  background: url('../images/hero.png') center center / cover no-repeat;
+  background: url('../images/hero.png') center center / 960px auto repeat;
   overflow: hidden;
 }
 .hero__container {
