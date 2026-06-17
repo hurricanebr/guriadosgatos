@@ -323,7 +323,7 @@ p  { color: var(--color-text-light); }
    =========================== */
 .hero {
   padding: 8rem 0 5rem;
-  background: linear-gradient(135deg, #FDFBFF 0%, #EEE8FF 100%);
+  background: url('../images/hero.png') center center / cover no-repeat;
   overflow: hidden;
 }
 .hero__container {
