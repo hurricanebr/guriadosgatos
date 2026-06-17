@@ -1267,15 +1267,6 @@ p  { color: var(--color-text-light); }
   .trust-strip__item { font-size: 0.8rem; }
 }
 
-/* ===========================
-   HERO IMAGE REAL PHOTO (CRO)
-   =========================== */
-.hero__image img {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 360px;
-  height: 360px;
-}
 
 /* ===========================
    SOBRE DUO PHOTOS (CRO)
