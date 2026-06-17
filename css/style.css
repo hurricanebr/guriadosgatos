@@ -1296,6 +1296,7 @@ p  { color: var(--color-text-light); }
   gap: 2rem;
   align-items: stretch;
 }
+.servicos__container .section-header { grid-column: 1 / -1; margin-bottom: 1rem; }
 .servico-card { height: 100%; display: flex; flex-direction: column; }
 .servico-card .btn { margin-top: auto; }
 .servico-card--secondary {
