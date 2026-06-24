@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd admin && npm install && npm run build",
-  "outputDirectory": ".",
+  "buildCommand": "cd admin && npm install && npm run build && cd .. && mkdir -p public && cp index.html sobre-nos.html gatifique-se.html robots.txt sitemap.xml llms.txt logo-avatar.png og-image.png public/ && cp -r css js images admin-dist public/",
+  "outputDirectory": "public",
   "rewrites": [
     {
       "source": "/admin/assets/:path*",
