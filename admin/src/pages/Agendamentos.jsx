@@ -60,7 +60,7 @@ export default function Agendamentos() {
         {profile?.role === 'admin' && (
           <Link
             to="/admin/agendamentos/novo"
-            className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700"
+            className="bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors cursor-pointer"
           >
             + Novo agendamento
           </Link>
@@ -72,12 +72,12 @@ export default function Agendamentos() {
           type="date"
           value={filtroData}
           onChange={e => setFiltroData(e.target.value)}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+          className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
         />
         <select
           value={filtroStatus}
           onChange={e => setFiltroStatus(e.target.value)}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+          className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
         >
           <option value="">Todos os status</option>
           {Object.entries(STATUS_LABELS).map(([v, l]) => (
@@ -88,7 +88,7 @@ export default function Agendamentos() {
           <select
             value={filtroSitter}
             onChange={e => setFiltroSitter(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
           >
             <option value="">Todas as cat sitters</option>
             {sitters.map(s => <option key={s.id} value={s.id}>{s.nome}</option>)}

@@ -48,6 +48,7 @@ Deno.serve(async (req) => {
     password: senha,
     email_confirm: true,
     user_metadata: { nome, role },
+    app_metadata: { role },
   })
 
   if (error) {

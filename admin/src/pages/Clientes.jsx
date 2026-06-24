@@ -35,7 +35,7 @@ export default function Clientes() {
         <h1 className="text-2xl font-bold text-gray-800">Clientes</h1>
         <Link
           to="/admin/clientes/novo"
-          className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700"
+          className="bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors cursor-pointer"
         >
           + Novo cliente
         </Link>
@@ -46,7 +46,7 @@ export default function Clientes() {
         placeholder="Buscar por nome ou telefone..."
         value={busca}
         onChange={e => setBusca(e.target.value)}
-        className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+        className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
       />
 
       {loading && <p className="text-gray-400 text-sm">Carregando...</p>}
@@ -65,7 +65,7 @@ export default function Clientes() {
               <p className="text-sm text-gray-400">{c.telefone}</p>
             </div>
             <div className="flex gap-3">
-              <Link to={`/admin/clientes/${c.id}`} className="text-sm text-pink-600 hover:underline">
+              <Link to={`/admin/clientes/${c.id}`} className="text-sm text-brand hover:underline">
                 Editar
               </Link>
               <button
