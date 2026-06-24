@@ -1,0 +1,13 @@
+{
+  "buildCommand": "cd admin && npm install && npm run build",
+  "rewrites": [
+    {
+      "source": "/admin/assets/:path*",
+      "destination": "/admin-dist/assets/:path*"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin-dist/index.html"
+    }
+  ]
+}
