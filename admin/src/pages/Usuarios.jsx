@@ -42,11 +42,11 @@ export default function Usuarios() {
 
     const json = await res.json()
     if (!res.ok) {
-      setErro(json.error || 'Erro ao criar usuária.')
+      setErro(json.error || 'Erro ao criar Cat Sitter.')
       return
     }
 
-    setSucesso(`Usuária ${nome} criada com sucesso!`)
+    setSucesso(`Cat Sitter ${nome} criada com sucesso!`)
     reset()
     setMostrarForm(false)
     carregar()
@@ -57,12 +57,12 @@ export default function Usuarios() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">Usuárias</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Cat Sitters</h1>
         <button
           onClick={() => { setMostrarForm(true); setErro(''); setSucesso('') }}
           className="bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors cursor-pointer"
         >
-          + Nova usuária
+          + Nova Cat Sitter
         </button>
       </div>
 
@@ -76,7 +76,7 @@ export default function Usuarios() {
         <form onSubmit={handleSubmit(onSubmit)}
           className="bg-white rounded-xl border border-gray-200 p-6 mb-6 space-y-4"
         >
-          <h2 className="text-base font-semibold text-gray-700">Nova usuária</h2>
+          <h2 className="text-base font-semibold text-gray-700">Nova Cat Sitter</h2>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
@@ -111,7 +111,7 @@ export default function Usuarios() {
               {...register('senha', { required: true, minLength: 8 })}
               className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
             />
-            <p className="text-xs text-gray-400 mt-1">A usuária troca no primeiro acesso.</p>
+            <p className="text-xs text-gray-400 mt-1">A Cat Sitter troca no primeiro acesso.</p>
           </div>
           {erro && <p className="text-sm text-red-500">{erro}</p>}
           <div className="flex gap-3">
@@ -120,7 +120,7 @@ export default function Usuarios() {
               disabled={isSubmitting}
               className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark disabled:opacity-50 transition-colors cursor-pointer"
             >
-              {isSubmitting ? 'Criando...' : 'Criar usuária'}
+              {isSubmitting ? 'Criando...' : 'Criar Cat Sitter'}
             </button>
             <button
               type="button"
@@ -137,7 +137,7 @@ export default function Usuarios() {
 
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
         {usuarios.length === 0 && !loading && (
-          <p className="p-4 text-sm text-gray-400">Nenhuma usuária cadastrada.</p>
+          <p className="p-4 text-sm text-gray-400">Nenhuma Cat Sitter cadastrada.</p>
         )}
         {usuarios.map((u, i) => (
           <div

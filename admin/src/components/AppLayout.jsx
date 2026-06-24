@@ -30,7 +30,7 @@ export default function AppLayout() {
           {profile?.role === 'admin' && (
             <>
               <NavLink to="/admin/clientes" className={linkClass}>Clientes</NavLink>
-              <NavLink to="/admin/usuarios" className={linkClass}>Usuárias</NavLink>
+              <NavLink to="/admin/usuarios" className={linkClass}>Cat Sitters</NavLink>
             </>
           )}
         </nav>
