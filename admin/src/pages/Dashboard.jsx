@@ -52,7 +52,7 @@ export default function Dashboard() {
         {profile?.role === 'admin' && (
           <Link
             to="/admin/agendamentos/novo"
-            className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700"
+            className="bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors cursor-pointer"
           >
             + Novo agendamento
           </Link>
@@ -72,7 +72,7 @@ export default function Dashboard() {
           <Link
             key={ag.id}
             to={`/admin/agendamentos/${ag.id}`}
-            className="flex items-start justify-between bg-white rounded-xl border border-gray-200 p-4 hover:border-pink-300 transition-colors"
+            className="flex items-start justify-between bg-white rounded-xl border border-gray-200 p-4 hover:border-brand-light transition-colors"
           >
             <div>
               <p className="font-semibold text-gray-800">{ag.clientes?.nome}</p>

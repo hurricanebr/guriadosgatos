@@ -60,7 +60,7 @@ export default function Usuarios() {
         <h1 className="text-2xl font-bold text-gray-800">Usuárias</h1>
         <button
           onClick={() => { setMostrarForm(true); setErro(''); setSucesso('') }}
-          className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700"
+          className="bg-brand text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-dark transition-colors cursor-pointer"
         >
           + Nova usuária
         </button>
@@ -82,14 +82,14 @@ export default function Usuarios() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
               <input
                 {...register('nome', { required: true })}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Função *</label>
               <select
                 {...register('role')}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
               >
                 <option value="catsitter">Cat Sitter</option>
                 <option value="admin">Admin</option>
@@ -101,7 +101,7 @@ export default function Usuarios() {
             <input
               type="email"
               {...register('email', { required: true })}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ export default function Usuarios() {
             <input
               type="password"
               {...register('senha', { required: true, minLength: 8 })}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
             />
             <p className="text-xs text-gray-400 mt-1">A usuária troca no primeiro acesso.</p>
           </div>
@@ -118,7 +118,7 @@ export default function Usuarios() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-pink-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700 disabled:opacity-50"
+              className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark disabled:opacity-50 transition-colors cursor-pointer"
             >
               {isSubmitting ? 'Criando...' : 'Criar usuária'}
             </button>

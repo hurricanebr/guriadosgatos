@@ -73,21 +73,21 @@ export default function ClienteForm() {
           <label className="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
           <input
             {...register('nome', { required: true })}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
           />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
           <input
             {...register('telefone')}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
           />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Endereço</label>
           <input
             {...register('endereco')}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
           />
         </div>
         <div>
@@ -95,7 +95,7 @@ export default function ClienteForm() {
           <textarea
             {...register('observacoes')}
             rows={3}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
           />
         </div>
         {erro && <p className="text-sm text-red-500">{erro}</p>}
@@ -103,7 +103,7 @@ export default function ClienteForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-pink-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700 disabled:opacity-50"
+            className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark disabled:opacity-50 transition-colors cursor-pointer"
           >
             {isSubmitting ? 'Salvando...' : 'Salvar'}
           </button>
@@ -144,17 +144,17 @@ export default function ClienteForm() {
               placeholder="Nome do gato *"
               value={novoGato.nome}
               onChange={e => setNovoGato(prev => ({ ...prev, nome: e.target.value }))}
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
             />
             <input
               placeholder="Observações"
               value={novoGato.observacoes}
               onChange={e => setNovoGato(prev => ({ ...prev, observacoes: e.target.value }))}
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand"
             />
             <button
               onClick={adicionarGato}
-              className="bg-pink-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-pink-700"
+              className="bg-brand text-white px-3 py-2 rounded-lg text-sm hover:bg-brand-dark transition-colors cursor-pointer"
             >
               +
             </button>

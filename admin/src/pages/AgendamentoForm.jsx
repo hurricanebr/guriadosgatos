@@ -88,7 +88,7 @@ export default function AgendamentoForm() {
           <select
             {...register('cliente_id', { required: true })}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           >
             <option value="">Selecione...</option>
             {clientes.map(c => <option key={c.id} value={c.id}>{c.nome}</option>)}
@@ -99,7 +99,7 @@ export default function AgendamentoForm() {
           <select
             {...register('cat_sitter_id', { required: true })}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           >
             <option value="">Selecione...</option>
             {sitters.map(s => <option key={s.id} value={s.id}>{s.nome}</option>)}
@@ -111,7 +111,7 @@ export default function AgendamentoForm() {
             type="datetime-local"
             {...register('data_hora', { required: true })}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           />
         </div>
         <div>
@@ -119,7 +119,7 @@ export default function AgendamentoForm() {
           <select
             {...register('status')}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           >
             <option value="agendado">Agendado</option>
             <option value="confirmado">Confirmado</option>
@@ -135,7 +135,7 @@ export default function AgendamentoForm() {
             min="0"
             {...register('valor')}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           />
         </div>
         <div>
@@ -143,7 +143,7 @@ export default function AgendamentoForm() {
           <input
             {...register('endereco_visita')}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           />
         </div>
         <div>
@@ -152,7 +152,7 @@ export default function AgendamentoForm() {
             {...register('observacoes')}
             rows={3}
             disabled={disabled}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 disabled:bg-gray-50"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand disabled:bg-gray-50"
           />
         </div>
         {erro && <p className="text-sm text-red-500">{erro}</p>}
@@ -161,7 +161,7 @@ export default function AgendamentoForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-pink-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700 disabled:opacity-50"
+              className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark disabled:opacity-50 transition-colors cursor-pointer"
             >
               {isSubmitting ? 'Salvando...' : 'Salvar'}
             </button>
