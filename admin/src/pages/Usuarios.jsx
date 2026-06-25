@@ -26,7 +26,7 @@ export default function Usuarios() {
     setLoading(false)
   }
 
-  async function onSubmit({ nome, email, senha, role }) {
+  async function onSubmit({ nome, email, role }) {
     setErro('')
     setSucesso('')
 
@@ -37,16 +37,16 @@ export default function Usuarios() {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${session.access_token}`,
       },
-      body: JSON.stringify({ nome, email, senha, role }),
+      body: JSON.stringify({ nome, email, role }),
     })
 
     const json = await res.json()
     if (!res.ok) {
-      setErro(json.error || 'Erro ao criar Cat Sitter.')
+      setErro(json.error || 'Erro ao enviar convite.')
       return
     }
 
-    setSucesso(`Cat Sitter ${nome} criada com sucesso!`)
+    setSucesso(`Convite enviado para ${email}!`)
     reset()
     setMostrarForm(false)
     carregar()
@@ -104,15 +104,9 @@ export default function Usuarios() {
               className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Senha inicial *</label>
-            <input
-              type="password"
-              {...register('senha', { required: true, minLength: 8 })}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
-            />
-            <p className="text-xs text-gray-400 mt-1">A Cat Sitter troca no primeiro acesso.</p>
-          </div>
+          <p className="text-xs text-gray-400">
+            A Cat Sitter receberá um email com o link de acesso e definirá a própria senha.
+          </p>
           {erro && <p className="text-sm text-red-500">{erro}</p>}
           <div className="flex gap-3">
             <button
@@ -120,7 +114,7 @@ export default function Usuarios() {
               disabled={isSubmitting}
               className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark disabled:opacity-50 transition-colors cursor-pointer"
             >
-              {isSubmitting ? 'Criando...' : 'Criar Cat Sitter'}
+              {isSubmitting ? 'Enviando convite...' : 'Enviar convite'}
             </button>
             <button
               type="button"
