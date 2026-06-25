@@ -93,16 +93,22 @@ export async function mockAgendamentos(page, { list = MOCK_AGENDAMENTOS } = {}) 
   await page.route('**/rest/v1/agendamentos*', route => {
     const method = route.request().method()
     const url = route.request().url()
+    const accept = route.request().headers()['accept'] || ''
     if (method === 'GET') {
       if (url.includes('id=eq.')) {
-        return route.fulfill(json([{
+        const single = {
           ...list[0],
           cliente_id: 'cliente-1',
           cat_sitter_id: 'sitter-1',
           endereco_visita: null,
           observacoes: null,
           created_by: FAKE_USER_ID,
-        }]))
+        }
+        // .single() sends Accept: application/vnd.pgrst.object+json — return plain object
+        if (accept.includes('application/vnd.pgrst.object+json')) {
+          return route.fulfill(json(single))
+        }
+        return route.fulfill(json([single]))
       }
       return route.fulfill(json(list))
     }
