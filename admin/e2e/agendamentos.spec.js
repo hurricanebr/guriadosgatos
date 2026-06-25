@@ -37,7 +37,7 @@ test.describe('Agendamentos', () => {
 
   test('filtrar por status: lista mostra apenas o status selecionado', async ({ page }) => {
     await page.goto('/admin/agendamentos')
-    await page.selectOption('select >> nth=0', 'confirmado')
+    await page.selectOption('select:has(option[value="agendado"])', 'confirmado')
     await expect(page.locator('text=Bruno Lima')).toBeVisible()
     await expect(page.locator('text=Ana Costa')).not.toBeVisible()
   })

@@ -56,6 +56,11 @@ export const MOCK_AGENDAMENTOS = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
+function isSingle(route) {
+  const accept = route.request().headers()['accept'] || ''
+  return accept.includes('application/vnd.pgrst.object+json')
+}
+
 function json(data, status = 200) {
   return { status, contentType: 'application/json', body: JSON.stringify(data) }
 }
@@ -72,12 +77,10 @@ function json(data, status = 200) {
 export async function mockProfiles(page, { authProfile = MOCK_ADMIN_PROFILE, list = MOCK_SITTERS } = {}) {
   await page.route('**/rest/v1/profiles*', route => {
     const url = route.request().url()
-    const req = route.request()
-    const accept = req.headers()['accept'] || ''
     // .single() sends Accept: application/vnd.pgrst.object+json — PostgREST returns
     // a plain object (not an array). Return the object directly to match that behavior.
     if (url.includes('id=eq.')) {
-      if (accept.includes('application/vnd.pgrst.object+json')) {
+      if (isSingle(route)) {
         return route.fulfill(json(authProfile))
       }
       return route.fulfill(json([authProfile]))
@@ -93,7 +96,6 @@ export async function mockAgendamentos(page, { list = MOCK_AGENDAMENTOS } = {}) 
   await page.route('**/rest/v1/agendamentos*', route => {
     const method = route.request().method()
     const url = route.request().url()
-    const accept = route.request().headers()['accept'] || ''
     if (method === 'GET') {
       if (url.includes('id=eq.')) {
         const single = {
@@ -105,7 +107,7 @@ export async function mockAgendamentos(page, { list = MOCK_AGENDAMENTOS } = {}) 
           created_by: FAKE_USER_ID,
         }
         // .single() sends Accept: application/vnd.pgrst.object+json — return plain object
-        if (accept.includes('application/vnd.pgrst.object+json')) {
+        if (isSingle(route)) {
           return route.fulfill(json(single))
         }
         return route.fulfill(json([single]))
@@ -125,11 +127,10 @@ export async function mockClientes(page, { list = MOCK_CLIENTES } = {}) {
   await page.route('**/rest/v1/clientes*', route => {
     const method = route.request().method()
     const url = route.request().url()
-    const accept = route.request().headers()['accept'] || ''
     if (method === 'GET') {
       if (url.includes('id=eq.')) {
         // .single() sends Accept: application/vnd.pgrst.object+json — return plain object
-        if (accept.includes('application/vnd.pgrst.object+json')) {
+        if (isSingle(route)) {
           return route.fulfill(json(list[0]))
         }
         return route.fulfill(json([list[0]]))
@@ -150,11 +151,10 @@ export async function mockClientes(page, { list = MOCK_CLIENTES } = {}) {
 export async function mockGatos(page, { list = MOCK_GATOS, novo = MOCK_NOVO_GATO } = {}) {
   await page.route('**/rest/v1/gatos*', route => {
     const method = route.request().method()
-    const accept = route.request().headers()['accept'] || ''
     if (method === 'GET') return route.fulfill(json(list))
     if (method === 'POST') {
       // .insert().select().single() sends Accept: application/vnd.pgrst.object+json
-      if (accept.includes('application/vnd.pgrst.object+json')) {
+      if (isSingle(route)) {
         return route.fulfill(json(novo, 201))
       }
       return route.fulfill(json([novo], 201))
