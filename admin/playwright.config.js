@@ -1,5 +1,6 @@
 import { defineConfig } from '@playwright/test'
 import { config } from 'dotenv'
+config({ path: '.env.local' })
 config()
 
 export default defineConfig({

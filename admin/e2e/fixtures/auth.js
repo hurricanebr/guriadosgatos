@@ -36,6 +36,18 @@ async function injectSession(page) {
       body: JSON.stringify(FAKE_SESSION.user),
     })
   )
+
+  // Intercepta refresh de token (supabase-js v2 pode chamar /auth/v1/token?grant_type=refresh_token)
+  await page.route('**/auth/v1/token**', route =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        ...FAKE_SESSION,
+        user: FAKE_SESSION.user,
+      }),
+    })
+  )
 }
 
 /**
