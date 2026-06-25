@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import AdminRoute from './components/AdminRoute'
+import SessionRoute from './components/SessionRoute'
 import AppLayout from './components/AppLayout'
 import Login from './pages/Login'
 import PrimeiroAcesso from './pages/PrimeiroAcesso'
@@ -18,7 +19,9 @@ export default function App() {
       <AuthProvider>
         <Routes>
           <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin/primeiro-acesso" element={<PrimeiroAcesso />} />
+          <Route path="/admin/primeiro-acesso" element={
+            <SessionRoute><PrimeiroAcesso /></SessionRoute>
+          } />
 
           <Route path="/admin" element={
             <ProtectedRoute><AppLayout /></ProtectedRoute>
