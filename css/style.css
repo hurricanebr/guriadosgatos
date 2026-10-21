@@ -330,7 +330,7 @@ p  { color: var(--color-text-light); }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/hero.png') center center / cover no-repeat;
+  background: url('../images/hero.webp') center center / cover no-repeat;
   opacity: 0.7;
   z-index: 0;
 }

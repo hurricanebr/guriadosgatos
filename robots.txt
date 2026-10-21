@@ -19,4 +19,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://guriadosgatos.com.br/sitemap.xml
+Sitemap: https://www.guriadosgatos.com.br/sitemap.xml

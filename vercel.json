@@ -1,4 +1,25 @@
 {
-  "buildCommand": "mkdir -p public && cp index.html sobre-nos.html gatifique-se.html robots.txt sitemap.xml llms.txt logo-avatar.png og-image.png public/ && cp -r css js images public/",
-  "outputDirectory": "public"
+  "buildCommand": "mkdir -p public && cp index.html sobre-nos.html gatifique-se.html 404.html robots.txt sitemap.xml llms.txt logo-avatar.png logo-avatar.webp favicon.png apple-touch-icon.png og-image.png public/ && cp -r css js images public/",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)\\.(css|js|webp|png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
 }

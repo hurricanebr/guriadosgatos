@@ -63,6 +63,6 @@ Concorrentes diretos (Meus Bigodes, Ronroninha) não oferecem consultoria compor
 
 ## Páginas do site
 
-- [Homepage — cat sitting domiciliar](https://guriadosgatos.com.br/)
-- [Sobre Nós — conheça as cat sitters](https://guriadosgatos.com.br/sobre-nos.html)
-- [E-book GATIFIQUE-se](https://guriadosgatos.com.br/gatifique-se.html)
+- [Homepage — cat sitting domiciliar](https://www.guriadosgatos.com.br/)
+- [Sobre Nós — conheça as cat sitters](https://www.guriadosgatos.com.br/sobre-nos)
+- [E-book GATIFIQUE-se](https://www.guriadosgatos.com.br/gatifique-se)
