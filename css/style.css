@@ -1376,3 +1376,32 @@ p  { color: var(--color-text-light); }
 @media (min-width: 768px) and (max-width: 1023px) {
   .ebook-aprenda__grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ========== GUIA (cat sitter ou hotel) ========== */
+.faq__more { text-align: center; margin-top: 2rem; }
+.faq__more a { color: var(--color-primary); font-weight: 700; }
+
+.guia__container { max-width: 780px; }
+.guia h2 { font-size: 1.6rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
+.guia p { margin-bottom: 1rem; line-height: 1.7; }
+.guia a { color: var(--color-primary); }
+.guia__meta { font-size: 0.9rem; color: var(--color-text-light); }
+.guia__resposta {
+  background: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.guia__resposta p { margin: 0; }
+.guia__tabela-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.guia__tabela { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 520px; }
+.guia__tabela th, .guia__tabela td { padding: 0.75rem; border-bottom: 1px solid var(--color-primary-light); text-align: left; vertical-align: top; }
+.guia__tabela thead th { background: var(--color-primary); color: var(--color-white); }
+.guia__tabela tbody th { color: var(--color-primary-dark); white-space: nowrap; }
+.guia__lista { padding-left: 1.25rem; margin-bottom: 1rem; }
+.guia__lista li { margin-bottom: 0.6rem; line-height: 1.6; }
+.guia__lista--check { list-style: none; padding-left: 0; }
+.guia__lista--check li::before { content: "✓ "; color: var(--color-primary); font-weight: 700; }
+.guia .faq__list { margin-top: 1rem; }
+.guia__fontes { font-size: 0.85rem; color: var(--color-text-light); margin-top: 2.5rem; }
