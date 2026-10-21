@@ -2,6 +2,18 @@
   "buildCommand": "sh build.sh",
   "outputDirectory": "public",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/cat-sitter-ou-hotel-para-gatos",
+      "destination": "/cat-sitting-ou-hotel-para-gatos",
+      "permanent": true
+    },
+    {
+      "source": "/cat-sitter-ou-hotel-para-gatos.html",
+      "destination": "/cat-sitting-ou-hotel-para-gatos",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(css|js|webp|png)",
