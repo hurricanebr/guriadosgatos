@@ -180,103 +180,222 @@
 
   <main>
 
-    <section class="sobrenos-hero section--alt" aria-labelledby="guia-title">
-      <div class="container sobrenos-hero__container">
-        <span class="badge">Guia para tutores</span>
-        <h1 id="guia-title">Cat sitter ou hotel para gatos: qual é melhor?</h1>
-        <p>Um comparativo honesto para você decidir com quem seu gato fica enquanto você viaja.</p>
+    <section class="guia-hero" aria-labelledby="guia-title">
+      <div class="container guia-hero__container">
+        <div class="guia-hero__text">
+          <span class="badge">Guia para tutores</span>
+          <h1 id="guia-title">Cat sitter ou hotel para gatos: qual é melhor?</h1>
+          <p class="guia-hero__subtitle">Um comparativo honesto para você decidir com quem seu gato fica enquanto você viaja.</p>
+          <ul class="guia-hero__chips" role="list">
+            <li>Gato no próprio território</li>
+            <li>Rotina mantida</li>
+            <li>Foto e vídeo todo dia</li>
+          </ul>
+        </div>
+        <img class="guia-hero__cat" src="images/04_gato_laranja_sentado.webp" alt="" aria-hidden="true" width="400" height="400">
       </div>
     </section>
 
-    <article class="guia section">
+    <article class="guia">
       <div class="container guia__container">
 
-        <p class="guia__meta">
-          Por <a href="/sobre-nos">Maitê e Ana</a>, cat sitters da Guria dos Gatos, com 10 anos de experiência com felinos em Porto Alegre ·
-          Atualizado em <time datetime="2026-10-21">21/10/2026</time>
-        </p>
+        <div class="guia__byline">
+          <div class="guia__byline-fotos" aria-hidden="true">
+            <img src="images/perfil_maite.webp" alt="" width="44" height="44">
+            <img src="images/perfil_ana.webp" alt="" width="44" height="44">
+          </div>
+          <p>Por <a href="/sobre-nos">Maitê e Ana</a>, cat sitters em Porto Alegre<br>
+          <span>Atualizado em <time datetime="2026-10-21">21/10/2026</time> · leitura de 5 min</span></p>
+        </div>
 
         <div class="guia__resposta">
-          <p><strong>Resposta curta:</strong> para a maioria dos gatos saudáveis, o cat sitter é a melhor opção. O gato continua no próprio território, mantém a rotina e não passa pelo estresse do transporte nem pelo contato com outros animais. O hotel faz mais sentido para gatos que precisam de supervisão 24 horas, como em pós-operatórios ou tratamentos intensivos.</p>
+          <p class="guia__resposta-label">Resposta curta</p>
+          <p>Para a maioria dos gatos saudáveis, o cat sitter é a melhor opção. O gato continua no próprio território, mantém a rotina e não passa pelo estresse do transporte nem pelo contato com outros animais. O hotel faz mais sentido para gatos que precisam de supervisão 24 horas, como em pós-operatórios ou tratamentos intensivos.</p>
         </div>
 
-        <h2>Comparativo: cat sitter x hotel para gatos</h2>
-        <div class="guia__tabela-wrap">
+        <nav class="guia__indice" aria-label="Neste guia">
+          <p class="guia__indice-titulo">Neste guia</p>
+          <ol>
+            <li><a href="#comparativo">Comparativo: cat sitter x hotel</a></li>
+            <li><a href="#quanto-custa">Quanto custa em Porto Alegre</a></li>
+            <li><a href="#por-que-em-casa">Por que a maioria dos gatos prefere ficar em casa</a></li>
+            <li><a href="#quando-hotel">Quando o hotel pode ser a melhor escolha</a></li>
+            <li><a href="#como-escolher">Como escolher um bom cat sitter</a></li>
+            <li><a href="#perguntas">Perguntas frequentes</a></li>
+          </ol>
+        </nav>
+
+        <section class="guia__secao" aria-labelledby="comparativo">
+          <h2 id="comparativo">Comparativo: cat sitter x hotel para gatos</h2>
           <table class="guia__tabela">
             <thead>
-              <tr><th scope="col">Critério</th><th scope="col">Cat sitter domiciliar</th><th scope="col">Hotel para gatos</th></tr>
+              <tr>
+                <th scope="col">Critério</th>
+                <th scope="col" class="is-destaque">Cat sitter domiciliar</th>
+                <th scope="col">Hotel para gatos</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">Ambiente</th><td>A casa do gato, com cheiros e esconderijos conhecidos</td><td>Ambiente novo, com sons e cheiros desconhecidos</td></tr>
-              <tr><th scope="row">Transporte</th><td>Não precisa</td><td>Ida e volta de caixa de transporte</td></tr>
-              <tr><th scope="row">Rotina</th><td>Mantida: mesma comida, mesma caixa de areia, mesmos horários</td><td>Adaptada à rotina do hotel</td></tr>
-              <tr><th scope="row">Contato com outros animais</th><td>Nenhum (só os gatos da casa)</td><td>Possível, com risco de doenças contagiosas</td></tr>
-              <tr><th scope="row">Atenção individual</th><td>Visita dedicada só ao seu gato</td><td>Dividida entre os hóspedes</td></tr>
-              <tr><th scope="row">Supervisão 24 horas</th><td>Não: visitas diárias de cerca de 1 hora</td><td>Sim, em geral</td></tr>
-              <tr><th scope="row">Atualizações</th><td>Foto e vídeo a cada visita pelo WhatsApp</td><td>Varia de hotel para hotel</td></tr>
+              <tr>
+                <th scope="row">Ambiente</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">A casa do gato, com cheiros e esconderijos conhecidos</td>
+                <td class="is-ruim" data-label="Hotel">Ambiente novo, com sons e cheiros desconhecidos</td>
+              </tr>
+              <tr>
+                <th scope="row">Transporte</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">Não precisa</td>
+                <td class="is-ruim" data-label="Hotel">Ida e volta de caixa de transporte</td>
+              </tr>
+              <tr>
+                <th scope="row">Rotina</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">Mantida: mesma comida, mesma caixa de areia, mesmos horários</td>
+                <td class="is-ruim" data-label="Hotel">Adaptada à rotina do hotel</td>
+              </tr>
+              <tr>
+                <th scope="row">Contato com outros animais</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">Nenhum (só os gatos da casa)</td>
+                <td class="is-ruim" data-label="Hotel">Possível, com risco de doenças contagiosas</td>
+              </tr>
+              <tr>
+                <th scope="row">Atenção individual</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">Visita dedicada só ao seu gato</td>
+                <td class="is-neutro" data-label="Hotel">Dividida entre os hóspedes</td>
+              </tr>
+              <tr>
+                <th scope="row">Supervisão 24 horas</th>
+                <td class="is-destaque is-neutro" data-label="Cat sitter">Não: visitas diárias de cerca de 1 hora</td>
+                <td class="is-bom" data-label="Hotel">Sim, em geral</td>
+              </tr>
+              <tr>
+                <th scope="row">Atualizações</th>
+                <td class="is-destaque is-bom" data-label="Cat sitter">Foto e vídeo a cada visita pelo WhatsApp</td>
+                <td class="is-neutro" data-label="Hotel">Varia de hotel para hotel</td>
+              </tr>
             </tbody>
           </table>
-        </div>
+        </section>
 
-        <h2>Por que a maioria dos gatos prefere ficar em casa</h2>
-        <p>Gatos são animais territoriais. A casa é o lugar onde eles se sentem seguros, e mudanças de ambiente estão entre as maiores fontes de estresse felino. Segundo a seguradora britânica <a href="https://www.petplan.co.uk/pet-information/cat/advice/pet-care-affecting-cat-behaviour/" target="_blank" rel="noopener noreferrer">Petplan</a>, sons, cheiros e visões desconhecidos podem ser demais para o gato, e até o trajeto até o hotel já gera estresse.</p>
-        <p>Um estudo publicado na revista científica <em>Animal Welfare</em> (Kessler &amp; Turner, 1997) acompanhou 140 gatos hospedados em hotéis por até duas semanas. Cerca de dois terços se adaptaram bem, mas para aproximadamente um terço a hospedagem foi uma experiência estressante. O problema é que não dá para saber de antemão em qual grupo o seu gato vai estar.</p>
-        <p>Na nossa experiência cuidando de centenas de gatos em Porto Alegre, os sinais de estresse mais comuns quando o gato sai de casa são falta de apetite, esconder-se o tempo todo e mudanças no uso da caixa de areia. Em casa, com a rotina preservada, esses sinais são bem mais raros.</p>
+        <section class="guia__secao guia-preco" aria-labelledby="quanto-custa">
+          <div class="guia-preco__texto">
+            <h2 id="quanto-custa">Quanto custa um cat sitter em Porto Alegre</h2>
+            <p>Na Guria dos Gatos, a visita domiciliar custa <strong>R$ 75</strong> e dura cerca de 1 hora. Inclui alimentação e água fresca, limpeza da caixa de areia, brincadeiras, administração de medicamentos (orais, injetáveis e soro subcutâneo, sob prescrição) e foto e vídeo pelo WhatsApp a cada visita. Antes de começar, fazemos uma visita de apresentação com valor simbólico, revertido ao projeto Miau de Apê.</p>
+          </div>
+          <div class="guia-preco__card">
+            <p class="guia-preco__label">Visita domiciliar</p>
+            <p class="guia-preco__valor"><span>R$</span> 75 <small>/ visita</small></p>
+            <ul class="guia-preco__inclui" role="list">
+              <li>Cerca de 1 hora de cuidado</li>
+              <li>Foto e vídeo pelo WhatsApp</li>
+              <li>Medicamentos e soro subcutâneo</li>
+              <li>Contrato e ficha de cuidados</li>
+            </ul>
+            <a href="https://wa.me/5551992441448?text=Olá!%20Li%20o%20guia%20e%20quero%20agendar%20a%20visita%20de%20apresentação!"
+               class="btn btn--whatsapp btn--full" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Agendar visita
+            </a>
+            <p class="guia-preco__nota">Atendemos todos os dias, inclusive feriados.</p>
+          </div>
+        </section>
 
-        <h2>Quando o hotel para gatos pode ser a melhor escolha</h2>
-        <ul class="guia__lista">
-          <li><strong>Supervisão constante:</strong> gatos em pós-operatório, com doenças que exigem monitoramento 24 horas ou internação.</li>
-          <li><strong>Gatos muito agressivos com estranhos:</strong> se o gato não permite a aproximação de ninguém além do tutor, as visitas em casa ficam difíceis.</li>
-          <li><strong>Casa indisponível:</strong> mudança, reforma ou quando não há como deixar a chave com alguém de confiança.</li>
-        </ul>
+        <section class="guia__secao" aria-labelledby="por-que-em-casa">
+          <h2 id="por-que-em-casa">Por que a maioria dos gatos prefere ficar em casa</h2>
+          <div class="guia-dado">
+            <div class="guia-dado__texto">
+              <p>Gatos são animais territoriais. A casa é o lugar onde eles se sentem seguros, e mudanças de ambiente estão entre as maiores fontes de estresse felino. Segundo a seguradora britânica <a href="https://www.petplan.co.uk/pet-information/cat/advice/pet-care-affecting-cat-behaviour/" target="_blank" rel="noopener noreferrer">Petplan</a>, sons, cheiros e visões desconhecidos podem ser demais para o gato, e até o trajeto até o hotel já gera estresse.</p>
+              <p>Um estudo publicado na revista científica <em>Animal Welfare</em> (Kessler &amp; Turner, 1997) acompanhou 140 gatos hospedados em hotéis por até duas semanas. Cerca de dois terços se adaptaram bem, mas para aproximadamente um terço a hospedagem foi uma experiência estressante. O problema é que não dá para saber de antemão em qual grupo o seu gato vai estar.</p>
+            </div>
+            <aside class="guia-dado__destaque" aria-label="Dado do estudo">
+              <p class="guia-dado__numero">1 em 3</p>
+              <p class="guia-dado__legenda">gatos hospedados em hotel ficou estressado durante a estadia</p>
+              <p class="guia-dado__fonte">Kessler &amp; Turner, <em>Animal Welfare</em>, 1997 · 140 gatos</p>
+            </aside>
+          </div>
+          <p>Na nossa experiência cuidando de centenas de gatos em Porto Alegre, os sinais de estresse mais comuns quando o gato sai de casa são falta de apetite, esconder-se o tempo todo e mudanças no uso da caixa de areia. Em casa, com a rotina preservada, esses sinais são bem mais raros.</p>
+        </section>
 
-        <h2>Quanto custa um cat sitter em Porto Alegre</h2>
-        <p>Na Guria dos Gatos, a visita domiciliar custa <strong>R$ 75</strong> e dura cerca de 1 hora. Inclui alimentação e água fresca, limpeza da caixa de areia, brincadeiras, administração de medicamentos (orais, injetáveis e soro subcutâneo, sob prescrição) e foto e vídeo pelo WhatsApp a cada visita. Antes de começar, fazemos uma visita de apresentação com valor simbólico, revertido ao projeto Miau de Apê.</p>
+        <section class="guia__secao" aria-labelledby="quando-hotel">
+          <h2 id="quando-hotel">Quando o hotel para gatos pode ser a melhor escolha</h2>
+          <p>Ser honesto faz parte do cuidado. Em alguns casos, o hotel é a opção mais segura:</p>
+          <ul class="guia-casos" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/><path d="M9 12h2l1-2 1 4 1-2h1"/></svg>
+              <div><strong>Supervisão constante</strong><p>Gatos em pós-operatório, com doenças que exigem monitoramento 24 horas ou internação.</p></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15c1.2-1 2.5-1.5 4-1.5s2.8.5 4 1.5M9 9.5h.01M15 9.5h.01"/></svg>
+              <div><strong>Gatos muito agressivos com estranhos</strong><p>Se o gato não permite a aproximação de ninguém além do tutor, as visitas em casa ficam difíceis.</p></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
+              <div><strong>Casa indisponível</strong><p>Mudança, reforma ou quando não há como deixar a chave com alguém de confiança.</p></div>
+            </li>
+          </ul>
+        </section>
 
-        <h2>Como escolher um bom cat sitter</h2>
-        <ul class="guia__lista guia__lista--check">
-          <li>Faz uma <strong>visita de apresentação</strong> antes de começar, para conhecer o gato e a casa.</li>
-          <li>Assina um <strong>contrato</strong> de prestação de serviços.</li>
-          <li>Preenche uma <strong>ficha de cuidados</strong> com rotina, alimentação, remédios e contato do veterinário.</li>
-          <li>Envia <strong>atualizações com foto ou vídeo</strong> em todas as visitas.</li>
-          <li>Tem experiência com <strong>medicamentos</strong> e sabe o que fazer numa emergência.</li>
-          <li>Tem <strong>avaliações públicas</strong> de outros tutores, como no Google.</li>
-        </ul>
+        <section class="guia__secao" aria-labelledby="como-escolher">
+          <h2 id="como-escolher">Como escolher um bom cat sitter</h2>
+          <p>Antes de deixar a chave de casa com alguém, confira se o profissional:</p>
+          <ul class="guia-checklist" role="list">
+            <li>Faz uma <strong>visita de apresentação</strong> antes de começar, para conhecer o gato e a casa.</li>
+            <li>Assina um <strong>contrato</strong> de prestação de serviços.</li>
+            <li>Preenche uma <strong>ficha de cuidados</strong> com rotina, alimentação, remédios e contato do veterinário.</li>
+            <li>Envia <strong>atualizações com foto ou vídeo</strong> em todas as visitas.</li>
+            <li>Tem experiência com <strong>medicamentos</strong> e sabe o que fazer numa emergência.</li>
+            <li>Tem <strong>avaliações públicas</strong> de outros tutores, como no Google.</li>
+          </ul>
+          <p class="guia-checklist__selo">A Guria dos Gatos cumpre os seis itens. <a href="/#como-funciona">Veja como funciona →</a></p>
+        </section>
 
-        <h2>Perguntas frequentes</h2>
-        <div class="faq__list">
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-1">
-              Posso deixar meu gato sozinho no fim de semana?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq__answer" id="guia-faq-1" role="region">
-              <p>Não recomendamos. Mesmo com comida e água sobrando, ninguém percebe se o gato parar de comer, passar mal ou ficar preso em algum cômodo. Uma visita por dia já garante água fresca, caixa de areia limpa e alguém de olho na saúde dele.</p>
+        <section class="guia__secao" aria-labelledby="perguntas">
+          <h2 id="perguntas">Perguntas frequentes</h2>
+          <div class="faq__list">
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-1">
+                Posso deixar meu gato sozinho no fim de semana?
+                <span class="faq__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq__answer" id="guia-faq-1" role="region">
+                <p>Não recomendamos. Mesmo com comida e água sobrando, ninguém percebe se o gato parar de comer, passar mal ou ficar preso em algum cômodo. Uma visita por dia já garante água fresca, caixa de areia limpa e alguém de olho na saúde dele.</p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-2">
+                Meu gato é tímido. O cat sitter ainda é a melhor opção?
+                <span class="faq__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq__answer" id="guia-faq-2" role="region">
+                <p>Na maioria dos casos, sim. Gatos tímidos costumam sofrer mais com ambientes novos. Em casa, eles podem se esconder no lugar de sempre enquanto a cat sitter cuida de tudo, respeitando o espaço deles. Para gatos ansiosos, usamos musicoterapia durante as visitas.</p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-3">
+                Quanto custa um cat sitter em Porto Alegre?
+                <span class="faq__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq__answer" id="guia-faq-3" role="region">
+                <p>Na Guria dos Gatos, cada visita de cerca de 1 hora custa R$ 75, com foto e vídeo pelo WhatsApp, limpeza da caixa de areia, alimentação e administração de medicamentos incluídas.</p>
+              </div>
             </div>
           </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-2">
-              Meu gato é tímido. O cat sitter ainda é a melhor opção?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq__answer" id="guia-faq-2" role="region">
-              <p>Na maioria dos casos, sim. Gatos tímidos costumam sofrer mais com ambientes novos. Em casa, eles podem se esconder no lugar de sempre enquanto a cat sitter cuida de tudo, respeitando o espaço deles. Para gatos ansiosos, usamos musicoterapia durante as visitas.</p>
-            </div>
+        </section>
+
+        <aside class="guia-autoras" aria-label="Sobre as autoras">
+          <div class="guia-autoras__fotos">
+            <img src="images/perfil_maite.webp" alt="Foto de Maitê, cat sitter da Guria dos Gatos" width="96" height="96" loading="lazy">
+            <img src="images/perfil_ana.webp" alt="Foto de Ana, cat sitter da Guria dos Gatos" width="96" height="96" loading="lazy">
           </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" aria-controls="guia-faq-3">
-              Quanto custa um cat sitter em Porto Alegre?
-              <span class="faq__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq__answer" id="guia-faq-3" role="region">
-              <p>Na Guria dos Gatos, cada visita de cerca de 1 hora custa R$ 75, com foto e vídeo pelo WhatsApp, limpeza da caixa de areia, alimentação e administração de medicamentos incluídas.</p>
-            </div>
+          <div>
+            <p class="guia-autoras__titulo">Quem escreveu este guia</p>
+            <p>Maitê e Ana são cat sitters e consultoras felinas em Porto Alegre, com 10 anos de experiência profissional com gatos e mais de 200 gatinhos atendidos. Também fundaram o Miau de Apê, projeto que ajuda gatos em situação de rua.</p>
+            <a href="/sobre-nos">Conheça a equipe →</a>
           </div>
-        </div>
+        </aside>
 
         <p class="guia__fontes"><strong>Fontes:</strong> Kessler, M. R. &amp; Turner, D. C. (1997). Stress and adaptation of cats (<em>Felis silvestris catus</em>) housed singly, in pairs and in groups in boarding catteries. <em>Animal Welfare</em>, 6, 243–254. · Petplan, <a href="https://www.petplan.co.uk/pet-information/cat/advice/pet-care-affecting-cat-behaviour/" target="_blank" rel="noopener noreferrer">“Are catteries stressful for cats?”</a></p>
 
       </div>
+      <img class="cat-deco guia__cat-deco" src="images/07_gato_deitado_bege.webp" alt="" aria-hidden="true" loading="lazy">
     </article>
 
   </main>
