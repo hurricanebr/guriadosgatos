@@ -1,3 +1,20 @@
-admin-dist/
-admin/node_modules/
-admin/.env.local
+public/
+node_modules/
+
+# Arquivos locais de trabalho (apresentação, prints, fontes, scripts auxiliares)
+/_*.js
+/apresentacao.html
+/*.pdf
+/*.pptx
+/*.docx
+/*.otf
+/*.ttf
+/sc-*.png
+/screenshot-*.png
+/quemsomosnos_*.png
+/servicos_1.webp
+/package.json
+/package-lock.json
+/skills-lock.json
+.agents/
+.claude/
