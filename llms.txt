@@ -6,19 +6,27 @@
 
 A Guria dos Gatos é uma empresa de cat sitting domiciliar em Porto Alegre com abordagem comportamental: musicoterapia para gatos ansiosos, consultoria de adaptação felina e enriquecimento ambiental. Nota 5.0 no Google. Atendimento todos os dias, incluindo feriados.
 
-Última atualização: 2026-10-21
+Última atualização: 2026-10-22
 
 Fundadoras: Maitê e Ana — 10 anos de experiência profissional com felinos em Porto Alegre. Mais de 200 gatinhos atendidos.
 
 ## Serviços e preços
 
-### Cat sitting domiciliar
+### Cat sitting domiciliar (para quando o tutor viaja)
 - Duração: 1 hora de cuidado exclusivo por visita
-- Preço: R$ 80 a diária (uma visita de cerca de 1 hora)
-- Soro subcutâneo e medicações injetáveis: valor diferenciado. Diária de cat sitting + soro: R$ 80 + R$ 50 de taxa do soro. Visita só para aplicar soro: R$ 100.
+- Preço: R$ 80 a diária (uma visita de cerca de 1 hora), com medicação oral inclusa
+- Com medicação injetável: R$ 110 a diária (R$ 80 + R$ 30)
+- Com soro subcutâneo: R$ 130 a diária (R$ 80 + R$ 50)
+- A diária cobre até 4 gatos; a partir do 5º, + R$ 5 por gato na diária.
 - Inclui: alimentação e água fresca na rotina do gato; medicamentos orais; limpeza da caixinha de areia; brincadeiras e carinho; musicoterapia para gatos ansiosos; relatório com foto e vídeo via WhatsApp a cada visita
 - Contrato digital assinado antes de iniciar
 - Ficha de cuidados individual por gato
+
+### Pet Care (visitas avulsas, sem duração fixa: o tempo que cada cuidado precisar)
+- Escovação, corte de unhas e medicação oral: R$ 80
+- Aplicação de medicação injetável: R$ 80
+- Aplicação de soro subcutâneo: R$ 100
+- Medicações sempre com prescrição veterinária
 
 ### Consultorias Especializadas
 - Consultoria de Adaptação Felina: introdução gradual e estruturada entre gatos

@@ -1337,8 +1337,59 @@ p  { color: var(--color-text-light); }
 }
 .servico-card--secondary .servico-card__title { color: var(--color-primary-dark); }
 .servico-card--secondary .servico-card__duration { color: var(--color-primary); font-weight: 600; font-size: 0.875rem; }
+
+/* Tabela de preços dentro do cartão (adicionais do cat sitting / opções do Pet Care) */
+.servico-card__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+.servico-card__precos {
+  background: #FAF6FF;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+.servico-card__precos--principal { background: none; padding: 0; }
+.servico-card__gatos {
+  display: inline-block;
+  align-self: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  margin: -0.75rem 0 1.25rem;
+}
+.servico-card__precos-titulo { font-weight: 700; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.5rem; }
+.servico-card__precos dl { display: grid; gap: 0.1rem; }
+.servico-card__precos dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-primary-light);
+}
+.servico-card__precos dl > div:last-child { border-bottom: none; }
+.servico-card__precos dt { font-weight: 600; color: var(--color-text); }
+.servico-card__precos dd { font-weight: 800; color: var(--color-primary-dark); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.servico-card__precos dd small { font-weight: 600; color: var(--color-text-light); font-size: 0.8rem; margin-left: 0.15rem; }
+.servico-card__precos-nota { font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.75rem; }
+.servicos__nota { grid-column: 1 / -1; text-align: center; font-weight: 600; color: var(--color-primary-dark); margin-top: -0.5rem; }
+.servico-card--wide { grid-column: 1 / -1; }
+.servico-card--wide .servico-card__list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; }
+.servico-card--wide .btn { align-self: center; width: auto; min-width: 320px; }
+
 @media (max-width: 767px) {
   .servicos__container { grid-template-columns: 1fr; }
+  .servico-card--wide .servico-card__list { grid-template-columns: 1fr; }
+  .servico-card--wide .btn { width: 100%; min-width: 0; }
 }
 
 /* ===========================
