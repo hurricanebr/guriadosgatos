@@ -15,6 +15,16 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ===========================
+   WHATSAPP FLUTUANTE (mobile) — aparece depois do hero
+   =========================== */
+const whatsappFloat = document.getElementById('whatsapp-float');
+if (whatsappFloat) {
+  window.addEventListener('scroll', () => {
+    whatsappFloat.classList.toggle('visible', window.scrollY > window.innerHeight * 0.8);
+  }, { passive: true });
+}
+
+/* ===========================
    NAV — HAMBURGER MENU
    =========================== */
 const hamburger = document.getElementById('hamburger');
