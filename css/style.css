@@ -446,6 +446,7 @@ p  { color: var(--color-text-light); }
 .servicos__container { max-width: 960px; }
 
 .servico-card {
+  scroll-margin-top: 90px;
   background: var(--color-card);
   border-radius: var(--radius);
   padding: 2.5rem;
