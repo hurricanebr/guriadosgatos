@@ -942,7 +942,7 @@ p  { color: var(--color-text-light); }
 .sobrenos-team__role {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-primary-light);
+  color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: -0.5rem 0 0;
