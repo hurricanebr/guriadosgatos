@@ -8,7 +8,7 @@ cp index.html sobre-nos.html gatifique-se.html cat-sitting-ou-hotel-para-gatos.h
 cp -r css js images public/
 
 # Versiona CSS e JS pelo conteúdo (?v=hash) para o cache de 1 dia nunca servir arquivo antigo
-for asset in css/style.css js/main.js js/ebook.js; do
+for asset in css/style.css js/main.js js/ebook.js js/consent.js; do
   v=$(md5sum "$asset" | cut -c1-8)
   pattern=$(printf '%s' "$asset" | sed 's/\./\\./g')
   sed -i -E "s#(href|src)=\"(/?)${pattern}(\?v=[^\"]*)?\"#\1=\"\2${asset}?v=${v}\"#g" public/*.html

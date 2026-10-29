@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google Analytics (GA4): só grava cookies depois do "Aceitar" no aviso de cookies (js/consent.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: localStorage.getItem('cookies') === 'aceito' ? 'granted' : 'denied',
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-ES89PF1VDP');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES89PF1VDP"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guria dos Gatos | Cat Sitter em Porto Alegre – RS</title>
@@ -808,7 +820,7 @@
           </div>
 
         </div>
-        <p class="faq__more">Na dúvida entre cat sitting e hotel? <a href="/cat-sitting-ou-hotel-para-gatos">Leia nosso guia comparativo →</a></p>
+        <p class="faq__more">Na dúvida entre cat sitting e hotel? <a href="/cat-sitting-ou-hotel-para-gatos" onclick="gtag('event', 'clique_guia_faq')">Leia nosso guia comparativo →</a></p>
       </div>
       <img class="cat-deco cat-deco--faq" src="images/07_gato_deitado_bege.webp" alt="" aria-hidden="true" loading="lazy">
     </section>
@@ -895,5 +907,6 @@
   </a>
 
   <script src="js/main.js" defer></script>
+  <script src="js/consent.js" defer></script>
 </body>
 </html>
