@@ -918,10 +918,13 @@ p  { color: var(--color-text-light); }
 .sobrenos-team { background-color: #fff; }
 .sobrenos-team__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  max-width: 600px;
+  max-width: 960px;
   margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .sobrenos-team__grid { grid-template-columns: 1fr 1fr; max-width: 600px; }
 }
 .sobrenos-team__card {
   display: flex;
