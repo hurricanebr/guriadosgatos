@@ -1,3 +1,8 @@
+// Evento principal do GA4: clique em qualquer link do WhatsApp (respeita o Consent Mode, como o resto do GA4)
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[href*="wa.me"]')) gtag('event', 'clique_whatsapp');
+});
+
 // Aviso de cookies (LGPD): aparece até a pessoa escolher; a escolha fica salva no navegador
 (function () {
   if (localStorage.getItem('cookies')) return;
